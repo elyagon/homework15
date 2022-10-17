@@ -34,10 +34,13 @@ public class Main {
         double startCapital = 15000;
         double percent = 1.07;
         int m = 1;
-        while ( startCapital<=12_000_000){
-            startCapital = startCapital*percent;
-            m = m+1;
-                System.out.println("Месяц " + m + ", сумма накоплений равняется: " + startCapital + " рублям.");}
+        while ( startCapital<=12_000_000) {
+            startCapital = startCapital * percent;
+            m = m + 1;
+            if (m % 6 == 0) {
+                System.out.println("Месяц " + m + ", сумма накоплений равняется: " + startCapital + " рублям.");
 
+            }
+        }
     }
 }
